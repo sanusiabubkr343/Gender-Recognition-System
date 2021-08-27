@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gender Detection</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1 id="main-header">
+      Welcome to SANUSI <strong>GENDER DETECTION SYSTEM</strong>
+    </h1>
+    <div class="home">
+      <p>
+        What this system does is that it helps you detect the gender of the
+        image passed into it. The required steps are highlighted below
+      </p>
+      <ul id="ordered">
+        <li class="list">Click on the drop down below</li>
+        <li class="list">Select the image</li>
+        <li class="list">Click on detect</li>
+        <li class="list">Wait for the magic to happen</li>
+      </ul>
+
+      {% block content %}
+      <form
+        method="post"
+        enctype="multipart/form-data"
+        action="{% url 'result' %}"
+      >
+        {% csrf_token %}
+        <input type="file" id="input" accept="image/*" required name="myfile" />
+        <button id="button" type="submit">Detect</button>
+      </form>
+      {% endblock %}
+    </div>
+  </body>
+</html>

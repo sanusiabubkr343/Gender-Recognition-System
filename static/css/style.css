@@ -1,0 +1,42 @@
+#main-header {
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+}
+
+body {
+  background-color: aquamarine;
+  font-size: 16px;
+  color: 555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#ordered li {
+  padding: 16px;
+}
+
+#ordered ul {
+  list-style: circle;
+}
+
+#button {
+  font-size: 12px;
+  padding: 8px 8px;
+  background-color: black;
+  color: aqua;
+  transition-duration: 0.4s;
+  margin: 8px;
+}
+
+#button:hover {
+  background-color: brown;
+  color: white;
+}
